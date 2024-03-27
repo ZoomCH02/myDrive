@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+        }
+        .el{
+            position: relative;
+            margin: 10px;
+        }
+        .inp{
+            right: 0px;
+            top: 0px;
+            position: absolute;
+        }   
+        .img{
+            width: 200px;
+        }
+        .inp:checked ~ .img{
+            border: solid;
+            border-color: red;
+            width: 196px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+         <div class="el">
+            <input data-id="1" class="inp" type="checkbox">
+            <img  class="img" src="./img/def.png">
+         </div>
+         <div class="el">
+            <input data-id="2" class="inp" type="checkbox">
+            <img class="img" src="./img/def.png">
+         </div>
+         <div class="el">
+            <input data-id="3" class="inp" type="checkbox">
+            <img class="img" src="./img/def.png">
+         </div>
+    </div>
+</body>
+</html>
+
+<!--
+    var a = document.querySelectorAll('.inp:checked') 
+    for(el of a){
+    console.log(el.dataset.id)
+} -->
